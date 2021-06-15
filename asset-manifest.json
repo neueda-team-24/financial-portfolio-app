@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/financial-portfolio-app/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/financial-portfolio-app/static/js/main.049dd86a.chunk.js",
+    "main.js.map": "/financial-portfolio-app/static/js/main.049dd86a.chunk.js.map",
+    "runtime-main.js": "/financial-portfolio-app/static/js/runtime-main.f475deeb.js",
+    "runtime-main.js.map": "/financial-portfolio-app/static/js/runtime-main.f475deeb.js.map",
+    "static/js/2.651532ad.chunk.js": "/financial-portfolio-app/static/js/2.651532ad.chunk.js",
+    "static/js/2.651532ad.chunk.js.map": "/financial-portfolio-app/static/js/2.651532ad.chunk.js.map",
+    "static/js/3.c62d383b.chunk.js": "/financial-portfolio-app/static/js/3.c62d383b.chunk.js",
+    "static/js/3.c62d383b.chunk.js.map": "/financial-portfolio-app/static/js/3.c62d383b.chunk.js.map",
+    "index.html": "/financial-portfolio-app/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/financial-portfolio-app/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.651532ad.chunk.js.LICENSE.txt": "/financial-portfolio-app/static/js/2.651532ad.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/financial-portfolio-app/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f475deeb.js",
+    "static/js/2.651532ad.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.049dd86a.chunk.js"
+  ]
+}
