@@ -113,7 +113,7 @@ class Homepage extends PureComponent {
             Total Number of Cards: {this.state.cards.length}
           </Typography>
         </Grid>
-        <Grid xs={12} style={{ paddingTop: "25px" }}>
+        <Grid xs={12} style={{ paddingTop: "35px", paddingBottom: "40px" }}>
           <Button variant="contained">
             <Typography>
               <Link href="https://www.ebay.com.sg/b/Pokemon-TCG/2536/bn_7117595258">
