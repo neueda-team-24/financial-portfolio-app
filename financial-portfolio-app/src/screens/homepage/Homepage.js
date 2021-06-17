@@ -28,27 +28,11 @@ class Homepage extends PureComponent {
 
   fetchData = async () => {
     const result = await axios
-      .post(
+      .get(
         "https://vn6t1iuloj.execute-api.ap-southeast-1.amazonaws.com/appData",
-        {
-          card_ids: [
-            "base4-4",
-            "base3-2",
-            "pop6-9",
-            "swsh3-69",
-            "xy12-103",
-            "dpp-DP39",
-            "xyp-XY13",
-            "neo4-113",
-            "ex7-105",
-            "sm35-56",
-            "ex4-89",
-          ],
-        },
         {
           headers: {
             "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type",
             "Content-Type": "application/json",
           },
@@ -107,7 +91,8 @@ class Homepage extends PureComponent {
                     : this.props.classes.loss
                 }
               >
-                ({isProfitable ? "+" : "-"}${this.state.user.total_profit_loss})
+                ({isProfitable ? "+" : "-"}$
+                {Math.abs(this.state.user.total_profit_loss).toFixed(2)})
               </Typography>
             </Tooltip>
           </Typography>
