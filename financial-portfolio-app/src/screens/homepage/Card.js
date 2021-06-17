@@ -4,10 +4,10 @@ import { Grid, Typography, Tooltip } from "@material-ui/core";
 
 const styles = (theme) => ({
   profitable: {
-    color: "green",
+    color: "#80D878",
   },
   loss: {
-    color: "red",
+    color: "#EC5858",
   },
 });
 
@@ -24,11 +24,11 @@ class PokemonCard extends PureComponent {
     return (
       <Grid item xs={10} sm={6} md={3}>
         <img src={image_url} alt={"Pokemon Card of " + name} />
-        <Typography variant="h6">
+        <Typography variant="h6" style={{ color: "beige" }}>
           <b>{name}</b>
         </Typography>
         <Tooltip title="Current Price (Profit / Loss)">
-          <Typography variant={"subtitle1"}>
+          <Typography variant={"subtitle1"} style={{ color: "beige" }}>
             ${price.toFixed(2)}{" "}
             <Typography
               display="inline"

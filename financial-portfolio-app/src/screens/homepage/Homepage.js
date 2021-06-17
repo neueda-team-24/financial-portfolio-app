@@ -10,10 +10,10 @@ const styles = (theme) => ({
     padding: "30px",
   },
   profitable: {
-    color: "green",
+    color: "#80D878",
   },
   loss: {
-    color: "red",
+    color: "#EC5858",
   },
 });
 
@@ -41,6 +41,8 @@ class Homepage extends PureComponent {
             "xyp-XY13",
             "neo4-113",
             "ex7-105",
+            "sm35-56",
+            "ex4-89",
           ],
         },
         {
@@ -88,12 +90,12 @@ class Homepage extends PureComponent {
         className={this.props.classes.gridContainer}
       >
         <Grid xs={12} style={{ padding: "30px" }}>
-          <Typography variant="h5">
+          <Typography variant="h5" style={{ color: "beige" }}>
             <b>Your Collection</b>
           </Typography>
         </Grid>
         <Grid xs={12}>
-          <Typography variant="h6">
+          <Typography variant="h6" style={{ color: "beige" }}>
             Total Asset Value: ${this.state.user.total_asset_value.toFixed(2)}{" "}
             <Tooltip title="Unrealised Gains / Losses">
               <Typography
@@ -105,14 +107,13 @@ class Homepage extends PureComponent {
                     : this.props.classes.loss
                 }
               >
-                ({isProfitable ? "+" : "-"}${this.state.user.total_profit_loss}{" "}
-                )
+                ({isProfitable ? "+" : "-"}${this.state.user.total_profit_loss})
               </Typography>
             </Tooltip>
           </Typography>
         </Grid>
         <Grid xs={12}>
-          <Typography variant="h6">
+          <Typography variant="h6" style={{ color: "beige" }}>
             Total Number of Cards: {this.state.cards.length}
           </Typography>
         </Grid>
