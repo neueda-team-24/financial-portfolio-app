@@ -74,13 +74,17 @@ class Homepage extends PureComponent {
         className={this.props.classes.gridContainer}
       >
         <Grid xs={12} style={{ padding: "30px" }}>
-          <Typography variant="h5" style={{ color: "beige" }}>
+          <Typography variant="h4" style={{ color: "beige" }}>
             <b>Your Collection</b>
           </Typography>
         </Grid>
         <Grid xs={12}>
           <Typography variant="h6" style={{ color: "beige" }}>
             Total Asset Value: ${this.state.user.total_asset_value.toFixed(2)}{" "}
+          </Typography>
+
+          <Typography variant="h6" style={{ color: "beige" }}>
+            Unrealised Gains / Losses:{" "}
             <Tooltip title="Unrealised Gains / Losses">
               <Typography
                 display="inline"
@@ -91,8 +95,8 @@ class Homepage extends PureComponent {
                     : this.props.classes.loss
                 }
               >
-                ({isProfitable ? "+" : "-"}$
-                {Math.abs(this.state.user.total_profit_loss).toFixed(2)})
+                {isProfitable ? "+" : "-"}$
+                {Math.abs(this.state.user.total_profit_loss).toFixed(2)}
               </Typography>
             </Tooltip>
           </Typography>
