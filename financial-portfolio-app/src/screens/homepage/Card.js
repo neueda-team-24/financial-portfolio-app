@@ -1,8 +1,6 @@
 import { React, PureComponent } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import { Paper, Grid, Typography } from "@material-ui/core";
-import Card from "./Card";
-import Axios from "axios";
+import { Grid, Typography, Tooltip } from "@material-ui/core";
 
 const styles = (theme) => ({
   profitable: {
@@ -24,25 +22,27 @@ class PokemonCard extends PureComponent {
     const isProfitable = profit >= 0;
 
     return (
-      <Grid item xs={10} sm={6} md={4}>
+      <Grid item xs={10} sm={6} md={3}>
         <img src={image_url} alt={"Pokemon Card of " + name} />
         <Typography variant="h6">
           <b>{name}</b>
         </Typography>
-        <Typography variant={"subtitle1"}>
-          ${price.toFixed(2)}{" "}
-          <Typography
-            display="inline"
-            variant="subtitle1"
-            className={
-              isProfitable
-                ? this.props.classes.profitable
-                : this.props.classes.loss
-            }
-          >
-            ({isProfitable ? "+" : "-"}${profit.toFixed(2)})
+        <Tooltip title="Current Price (Profit / Loss)">
+          <Typography variant={"subtitle1"}>
+            ${price.toFixed(2)}{" "}
+            <Typography
+              display="inline"
+              variant="subtitle1"
+              className={
+                isProfitable
+                  ? this.props.classes.profitable
+                  : this.props.classes.loss
+              }
+            >
+              ({isProfitable ? "+" : "-"}${Math.abs(profit).toFixed(2)})
+            </Typography>
           </Typography>
-        </Typography>
+        </Tooltip>
       </Grid>
     );
   }
