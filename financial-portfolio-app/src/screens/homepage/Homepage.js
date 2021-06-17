@@ -1,6 +1,13 @@
 import { React, PureComponent } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import { Grid, Tooltip, Typography, CircularProgress } from "@material-ui/core";
+import {
+  Button,
+  Grid,
+  Tooltip,
+  Typography,
+  CircularProgress,
+  Link,
+} from "@material-ui/core";
 import PokemonCard from "./Card";
 import axios from "axios";
 
@@ -106,7 +113,15 @@ class Homepage extends PureComponent {
             Total Number of Cards: {this.state.cards.length}
           </Typography>
         </Grid>
-
+        <Grid xs={12} style={{ paddingTop: "25px" }}>
+          <Button variant="contained">
+            <Typography>
+              <Link href="https://www.ebay.com.sg/b/Pokemon-TCG/2536/bn_7117595258">
+                Go to Pokemon Card Marketplace ➡️
+              </Link>
+            </Typography>
+          </Button>
+        </Grid>
         {this.state.cards.map((card, index) => (
           <PokemonCard key={index} card={card} />
         ))}
