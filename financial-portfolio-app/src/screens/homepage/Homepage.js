@@ -40,6 +40,11 @@ class Homepage extends PureComponent {
       })
       .then(res => {
         const { user, cards } = res.data;
+
+        cards.sort((a, b) => {
+          return b.price - a.price;
+        });
+
         this.setState({
           user: { ...user },
           cards: [...cards]
